@@ -24,7 +24,7 @@ echo('<!doctype html>
      
         </div>
         <div class="col-10 text-center">
-          <h2>Ticket´s ++</h2>
+          <h2><-Ticket Set -></h2>
         </div>
         <div class="col-1">
         </div>
@@ -36,7 +36,7 @@ echo('<!doctype html>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="#">
-          <img src="../assets/imagenes/icono.png" width="50" height="30" alt="">
+          <img src="../assets/imagenes/logo.png" width="50" height="30" alt="">
       </a>
       Tickets++
   </nav>
@@ -66,7 +66,7 @@ echo('<!doctype html>
               <a class="nav-link" href="#"><span class="oi oi-pencil"></span>Configuracion</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="../index.html">Salir</a>
+              <a class="nav-link" href="../index.php">Salir</a>
           </li>
       </ul>
 

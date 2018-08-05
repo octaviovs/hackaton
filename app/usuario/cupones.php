@@ -1,41 +1,41 @@
 <?php 
   include '../helpers/head.php';
+?>
 
 
-  echo('
   <div class="card">
   <h5 class="card-header">Mis Cupones</h5>
   <div class="card-body">
-    <h5 class="card-title">Tus cupones, los tienes al instante!</h5>
+    <h5 class="card-title">Al completar la cantidad de cupones establecidos podra canjearlos por sorpresas!</h5>
     <p class="card-text">Encuentra grandes ofertas con los cupones actuales.</p>
    
 
     <div class="form-row">   
+ 
     <div class="col-12 col-md-4">
-            <div class="dropdown">
-                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Servicios
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#" >Abarrotes</a>
-                      <a class="dropdown-item" href="#">Bares</a>
-                      <a class="dropdown-item" href="#">Carnicerias</a>
-                      <a class="dropdown-item" href="#"></a>
-                    </div>
-                  </div>
+   
+       <select class="form-control">
+        <option value="1">Abarrotes</option>
+        <option value="2">Bares</option>
+        <option value="3">Carniceroa</option>
+        <option value="4">Farmacia</option>
+        <option value="5">Panaderia</option>
+        <option value="6">Medico</option>
+      </select>
     </div>
     <div class="col-12 col-md-4">
-        </div>
-        <div class="col-12 col-md-4">
-
-
-            </div>
+    <button type="button" class="btn btn-info btn-lg btn-block">Filtrar</button>
+    </div>
+    <div class="col-12 col-md-4">
+    </div>
 </div>
 
 
     
   </div>
 </div>
-  ');
+
+
+<?php
   include '../helpers/footer.php';
  ?>

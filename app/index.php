@@ -47,7 +47,7 @@ if (!empty($_POST) ) {
           <img Height="65px" Width="76px" src="assets/imagenes/logo.png" alt="Responsive image"/>
         </div>
         <div class="col-10 text-center">
-          <h2>Ticket´s ++</h2>
+          <h2>Ticket Set</h2>
         </div>
         <div class="col-1">
         </div>
@@ -55,14 +55,14 @@ if (!empty($_POST) ) {
     </div>
   </header>
   <br />
-  <br />
+
   
 
 
 
-
+  <div class="container">
   <form   method="POST" action="index.php">
-    <div class="container">
+  
       <div class="row">
         <div class="col-sm-1 col-md-3 col-lg-3 col-xl-3 ">
         </div>
@@ -117,9 +117,12 @@ if (!empty($_POST) ) {
         <div class="col-sm-1 col-md-3 col-lg-3 col-xl-3">
         </div>
       </div>
-    </div>
+  <br>
   </form>
-
+  <div class="fondoColor">
+<br>
+  </div>
+   </div>
   
   <script src="assets/js/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"

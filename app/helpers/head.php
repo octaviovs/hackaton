@@ -47,21 +47,23 @@ echo('<!doctype html>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-              <a class="nav-link" href="index.html">Inicio
+              <a class="nav-link" href="index.php">
+              
+              <span class="oi oi-dashboard"></span>Inicio
                   <span class="sr-only">(current)</span>
               </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="registro.php"><span class="oi oi-camera-slr"></span>   Registrar</a>
+              <a class="nav-link" href="registro.php"><span class="oi oi-camera-slr"></span>   Escanear</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="cupones.php"> Cupones</a>
+              <a class="nav-link" href="cupones.php"><span class="oi oi-spreadsheet"></span> Cupones</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
+              <a class="nav-link" href="#"><span class="oi oi-people"></span>Servicios</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">Configuracion</a>
+              <a class="nav-link" href="#"><span class="oi oi-pencil"></span>Configuracion</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="../index.html">Salir</a>

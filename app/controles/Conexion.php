@@ -2,7 +2,7 @@
  class Conexion extends PDO { 
    private $tipo_de_base = 'mysql';
    private $host = '127.0.0.1';
-   private $nombre_de_base = 'examen1530096';
+   private $nombre_de_base = 'lealtad_cliente';
    private $usuario ='root';
    private $contrasena =''; 
    public function __construct() {

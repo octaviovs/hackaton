@@ -2,18 +2,18 @@
 require_once "Conexion.php";
  class Usuario
 {
-public $pk_usuario;
-	public $nombre;
-  public $correo;
-  public $clave;
-  public $acceso;
-  public $ultimoid;
-	function __construct($nombre,$correo,$clave)
+  public $ID;
+	public $NOMBRE_USUARIO;
+  public $CONTRASENA;
+  public $NOMBRE;
+  public $APELLIDOS;
+  
+	function __construct($NOMBRE_USUARIO,$CONTRASENA,$NOMBRE,$APELLIDOS)
 	{
-    $this->nombre=$nombre;
-    $this->correo=$correo;
-    $this->clave=$clave;
-    $this->acceso=false;  
+    $this->NOMBRE_USUARIO=$NOMBRE_USUARIO;
+    $this->CONTRASENA=$CONTRASENA;
+    $this->NOMBRE=$NOMBRE;
+    $this->APELLIDOS=$APELLIDOS;
 	}
  
   public function registro(){
@@ -35,14 +35,17 @@ public $pk_usuario;
 	public  function validar(){
       $bandera=false;
       $conexion = new Conexion();
-      $consulta = $conexion->prepare('SELECT * FROM usuario WHERE correo =:correo AND clave=:clave');
-      $consulta->bindParam(':correo', $this->correo);
-      $consulta->bindParam(':clave', $this->clave);
+      $consulta = $conexion->prepare('SELECT * FROM clientes WHERE NOMBRE_USUARIO =:NOMBRE_USUARIO AND CONTRASENA=:CONTRASENA');
+      $consulta->bindParam(':NOMBRE_USUARIO', $this->NOMBRE_USUARIO);
+      $consulta->bindParam(':CONTRASENA', $this->CONTRASENA);
       $consulta->execute();
       $registro = $consulta->fetch();
       if($registro){
-       $this->nombre=$registro['nombre'];
-       $this->pk_usuario=$registro['id'];
+       $this->ID=$registro['ID'];
+       $this->NOMBRE=$registro['NOMBRE'];
+
+
+ 
           $bandera= true;
        }else{
          $bandera= false;

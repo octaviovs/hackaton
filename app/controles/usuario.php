@@ -7,14 +7,15 @@ require_once "Conexion.php";
   public $CONTRASENA;
   public $NOMBRE;
   public $APELLIDOS;
-  
+    
 	function __construct($NOMBRE_USUARIO,$CONTRASENA,$NOMBRE,$APELLIDOS)
 	{
     $this->NOMBRE_USUARIO=$NOMBRE_USUARIO;
     $this->CONTRASENA=$CONTRASENA;
     $this->NOMBRE=$NOMBRE;
     $this->APELLIDOS=$APELLIDOS;
-	}
+  }
+  
  
   public function registro(){
       $bandera=false;
@@ -32,7 +33,29 @@ require_once "Conexion.php";
       }
       return $bandera;
    }
-	public  function validar(){
+  
+   public function registroCupon($codigo_cupon,$id_cliente,$fecha){
+    $bandera=false;
+    try {
+      $conexion = new Conexion();
+
+
+      $consulta = $conexion->prepare('INSERT INTO registro_cupones VALUES (:CODIGO_CUPON,:ID_CLIENTE,:FECHA)');
+
+      $consulta->bindParam(':CODIGO_CUPON', $codigo_cupon);
+      $consulta->bindParam(':ID_CLIENTE', $id_cliente);
+      $consulta->bindParam(':FECHA', $fecha);
+      
+      $consulta->execute();
+   
+      $bandera=true;
+    } catch (Exception $e) {
+      $bandera=false;
+    }
+    return $bandera;
+ }
+
+   public  function validar(){
       $bandera=false;
       $conexion = new Conexion();
       $consulta = $conexion->prepare('SELECT * FROM clientes WHERE NOMBRE_USUARIO =:NOMBRE_USUARIO AND CONTRASENA=:CONTRASENA');

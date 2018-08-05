@@ -60,7 +60,7 @@ echo('<!doctype html>
               <a class="nav-link" href="cupones.php"><span class="oi oi-spreadsheet"></span> Cupones</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#"><span class="oi oi-people"></span>Servicios</a>
+              <a class="nav-link" href="servicios.html"><span class="oi oi-people"></span>Servicios</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="#"><span class="oi oi-pencil"></span>Configuracion</a>

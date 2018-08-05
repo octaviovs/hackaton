@@ -2,30 +2,41 @@
 require_once "Conexion.php";
  class Usuario
 {
-  public $ID;
-  public $NOMBRE_USUARIO;
-  public $CONTRASENA;
-  public $NOMBRE;
-  public $APELLIDOS;
+  public $CODIGO;
+  public $NUMERO_NEGOCIO;
+  public $DESCRIPCION;
+  public $LIMITE;
+  public $DESCUENTO;
+  public $QR;
   
-	function __construct($NOMBRE_USUARIO,$CONTRASENA,$NOMBRE,$APELLIDOS)
+	function __construct($codigo,$numero_negocio,$descripcion,$limite,$descuento,$qr)
 	{
-    $this->NOMBRE_USUARIO=$NOMBRE_USUARIO;
-    $this->CONTRASENA=$CONTRASENA;
-    $this->NOMBRE=$NOMBRE;
-    $this->APELLIDOS=$APELLIDOS;
+    $this->CODIGO=$codigo;
+    $this->NUMERO_NEGOCIO=$numero_negocio;
+    $this->DESCRIPCION=$descripcion;
+    $this->LIMITE=$limite;
+    $this->DESCUENTO=$descuento;
+    $this->QR=$qr;
+  }
+  function __construct0()
+	{
+		
 	}
  
   public function registro(){
       $bandera=false;
       try {
         $conexion = new Conexion();
-        $consulta = $conexion->prepare('INSERT INTO usuario(nombre,correo,clave) VALUES(:nombre,:correo,:clave)');
-        $consulta->bindParam(':nombre', $this->nombre);
-        $consulta->bindParam(':correo', $this->correo);
-        $consulta->bindParam(':clave', $this->clave);
+
+
+        $consulta = $conexion->prepare('INSERT INTO `registro_cupones`(`NUM_REGISTRO`, `CODIGO_CUPON`, `ID_CLIENTE`, `FECHA`) VALUES  (:NUM_REGISTRO,:CODIGO_CUPON,:ID_CLIENTE,:FECHA)');
+        $consulta->bindParam(':NUM_REGISTRO', $this->NUM_REGISTRO);
+        $consulta->bindParam(':CODIGO_CUPON', $this->CODIGO_CUPON);
+        $consulta->bindParam(':ID_CLIENTE', $this->ID_CLIENTE);
+        $consulta->bindParam(':FECHA', $this->FECHA);
+        
         $consulta->execute();
-        $this->ultimoid=$conexion->lastInsertId();
+     
         $bandera=true;
       } catch (Exception $e) {
         $bandera=false;

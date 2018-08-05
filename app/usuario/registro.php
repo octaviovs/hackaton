@@ -18,7 +18,26 @@
     </div>
     <div class="col-12 col-md-3">
     </div>
-    <input type="text" id="datos" value="">
+    </div>
+    
+
+    <form action="contRegistroCupon.php" method="POST">
+
+
+    <div class="form-row">   
+    <div class="col-12 col-md-2">  
+    </div>
+    <div class="col-12 col-md-8">
+ 
+ 
+    <input type="text" id="datos" name="datos" class="form-control" value="" placeholder="Codigo QR"   required="" >  
+    <br>
+    <input type="submit" value="Canjear" class="btn btn-success btn-lg btn-block" />
+                         
+    </div>
+    <div class="col-12 col-md-2">
+    </div>
+    </form>
 </div>
 
 

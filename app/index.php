@@ -10,6 +10,7 @@ if (!empty($_POST) ) {
 
 
      $miUsuario=new Usuario($_POST['nombre'],$_POST['clave'],"","");
+     
       if ($miUsuario->validar()) {
         $_SESSION["usuario"]=$miUsuario;
         header("Location:usuario/index.php ");
